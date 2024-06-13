@@ -1,0 +1,174 @@
+/* Reseta algumas propriedades básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 60px; /* Espaço para o header fixo */
+    padding-bottom: 40px; /* Espaço para o footer fixo */
+}
+
+#search {
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#search h1 {
+    padding: 10px;
+    font-size: 30px;
+}
+
+#search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#search-form label {
+    flex-basis: 100%;
+    margin-bottom: 5px;
+    color: #555;
+    align-self: flex-start;
+    padding: 10px;
+}
+
+#search-form input, #search-form select, #search-form button {
+    flex-basis: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#search-form button {
+    flex-basis: 100%;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #4cae4c;
+}
+
+#events-list {
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#events-list h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.event {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.event img {
+    flex-basis: 100%;
+    max-width: 200px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.event h3 {
+    flex-basis: 100%;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.event p {
+    flex-basis: 100%;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.event button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: #fff;
+    cursor: pointer;
+}
+
+.event button:hover {
+    background-color: #4cae4c;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+}

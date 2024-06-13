@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Eventos Locais</title>
+    <link rel="stylesheet" href="/assets/css/eventos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="events-main">
+        <section id="search">
+            <h1>Encontre Eventos</h1>
+            <form id="search-form">
+                <label for="search-location">Localização:</label>
+                <input type="text" id="search-location" name="location">
+
+                <label for="search-date">Data:</label>
+                <input type="date" id="search-date" name="date">
+
+                <label for="search-type">Tipo de Evento:</label>
+                <select id="search-type" name="type">
+                    <option value="music">Música</option>
+                    <option value="tech">Tecnologia</option>
+                    <option value="sports">Esportes</option>
+                    <!-- Adicione mais tipos conforme necessário -->
+                </select>
+
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section id="events-list">
+            <h2>Eventos Disponíveis</h2>
+            <div class="event">
+                <img src="img/event1.jpg" alt="Imagem do evento 1">
+                <h3>Evento de Música</h3>
+                <p>Local: São Paulo, SP</p>
+                <p>Data: 25 de Junho, 2024</p>
+                <p>Descrição: Um grande evento musical com várias bandas.</p>
+                <button>Favoritar</button>
+            </div>
+            <div class="event">
+                <img src="img/event2.jpg" alt="Imagem do evento 2">
+                <h3>Conferência de Tecnologia</h3>
+                <p>Local: Rio de Janeiro, RJ</p>
+                <p>Data: 10 de Julho, 2024</p>
+                <p>Descrição: Conferência sobre as últimas tendências em tecnologia.</p>
+                <button>Favoritar</button>
+            </div>
+            <!-- Adicione mais eventos conforme necessário -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Eventos Locais. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
