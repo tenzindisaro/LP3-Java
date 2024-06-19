@@ -26,6 +26,7 @@ header {
     padding: 10px 0;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
 header nav ul {
@@ -52,30 +53,30 @@ header nav ul li a:hover {
 main {
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding-top: 60px; /* Espaço para o header fixo */
-}
-
-#contact-main {
-    width: 100%;
-    max-width: 1200px;
-    background: #fff;
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 h1 {
     margin-bottom: 20px;
     text-align: center;
     color: #333;
-    font-size: large;
+    font-size: 24px;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 form label {
@@ -83,22 +84,16 @@ form label {
     color: #555;
 }
 
-form input, form textarea {
+form input {
     margin-bottom: 15px;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
 }
 
-form textarea {
-    resize: vertical;
-    min-height: 150px;
-    min-width: 1000px;
-}
-
 form button {
-    padding: 15px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: #5cb85c;
@@ -111,31 +106,7 @@ form button:hover {
     background-color: #4cae4c;
 }
 
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-}
-
 /* Responsividade */
-@media (max-width: 1200px) {
-    #contact-main {
-        padding: 30px;
-    }
-    
-    form input, form textarea {
-        font-size: 14px;
-    }
-    
-    form button {
-        font-size: 16px;
-    }
-}
-
 @media (max-width: 768px) {
     header nav ul {
         flex-direction: column;
@@ -145,35 +116,46 @@ footer {
         margin: 10px 0;
     }
 
-    #contact-main {
-        padding: 20px;
+    form {
+        width: 100%;
+        padding: 15px;
     }
 
-    form input, form textarea {
-        padding: 10px;
-    }
-
-    form button {
-        padding: 10px;
+    form input, form button {
+        font-size: 14px;
+        padding: 8px;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: medium;
+        font-size: 20px;
     }
 
-    form input, form textarea {
+    form input, form button {
         font-size: 12px;
-        padding: 8px;
-    }
-
-    form textarea {
-        min-width: 100%;
-    }
-
-    form button {
-        font-size: 14px;
-        padding: 8px;
+        padding: 6px;
     }
 }
+
+#estado {
+    padding: 8px 12px; /* Espaçamento interno para melhorar o visual */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 4px; /* Cantos arredondados */
+    background-color: #fff; /* Cor de fundo branca */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    outline: none; /* Remove o contorno padrão ao focar */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transições suaves */
+    margin: 10px 0;
+  }
+  
+  #estado:hover,
+  #estado:focus {
+    border-color: #aaa; /* Mudança na cor da borda ao passar o mouse ou focar */
+  }
+  
+  #estado option {
+    padding: 8px 12px; /* Espaçamento interno das opções */
+    font-size: 16px; /* Tamanho da fonte das opções */
+  }
