@@ -64,3 +64,20 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+
+# Ignore directories
+Ambiente de Impressão/
+Ambiente de Rede/
+Configurações Locais/
+Cookies/
+Dados de Aplicativos/
+Menu Iniciar/
+Meus Documentos/
+Modelos/
+Recent/
+SendTo/
+
+# Ignore other files
+*.log
+*.tmp
